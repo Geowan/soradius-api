@@ -1,0 +1,25 @@
+{
+    "name": "soradius/soradius",
+    "description": "Official Soradius solutions PHP SDK",
+    "keywords": ["soradius"],
+    "homepage": "http://github.com/soradius/soradius-php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Soradius solutions",
+            "email": "support@soradius.com",
+            "homepage": "https://www.soradius.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.0 || ^7.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Soradius\\": "src/"
+        }
+    }
+}
