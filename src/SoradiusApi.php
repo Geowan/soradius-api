@@ -1,9 +1,9 @@
 <?php
-namespace AfricasTalking\SDK;
+namespace SoradiusApi;
 
 use GuzzleHttp\Client;
 
-class SoradiusSolutions
+class SoradiusApi
 {
 	const BASE_DOMAIN = "soradius.com";
 
