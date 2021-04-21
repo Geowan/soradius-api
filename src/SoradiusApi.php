@@ -14,12 +14,22 @@ class SoradiusApi
 
     public $baseUrl;
 
-    public function __construct($apiKey, $sandbox = false)
+    /**
+     * SoradiusApi constructor.
+     * @param $apiKey
+     * @param false $sandbox
+     * @param null $sandboxBaseUrl used for localhost testing
+     */
+    public function __construct($apiKey, $sandbox = false, $sandboxBaseUrl=null)
     {
         $this->baseDomain = self::BASE_DOMAIN;
         $this->apiKey = $apiKey;
         $this->sandbox = $sandbox;
         $this->baseUrl = "https://" . $this->baseDomain . "/rest";
+        if (!empty($sandboxBaseUrl)){
+            $this->baseUrl =$sandboxBaseUrl."/rest";
+        }
+
     }
     /**
      * Sends email to soradius api
