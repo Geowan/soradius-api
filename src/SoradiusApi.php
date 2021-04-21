@@ -65,7 +65,8 @@ class SoradiusApi
             'form_params' => [
                 "from" => $from,
                 "to" => $to,
-                "message" => $message
+                "message" => $message,
+                "apiKey" => $this->apiKey,
             ]
         ]);
     }
