@@ -19,7 +19,7 @@ class SoradiusApi
         $this->baseDomain = self::BASE_DOMAIN;
         $this->apiKey = $apiKey;
         $this->sandbox = $sandbox;
-        $this->baseUrl = "https://" . $this->baseDomain . "/api/v1/";
+        $this->baseUrl = "https://" . $this->baseDomain . "/api/v1";
     }
     /**
      * Sends email to soradius api
