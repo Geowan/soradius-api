@@ -19,7 +19,7 @@ class SoradiusApi
         $this->baseDomain = self::BASE_DOMAIN;
         $this->apiKey = $apiKey;
         $this->sandbox = $sandbox;
-        $this->baseUrl = "https://" . $this->baseDomain . "/api/v1";
+        $this->baseUrl = "https://" . $this->baseDomain . "/rest";
     }
     /**
      * Sends email to soradius api
@@ -31,7 +31,7 @@ class SoradiusApi
     public function sendEmail($from, $to, $subject, $htmlBody)
     {
         $client = new Client();
-        return $client->request('POST', $this->baseUrl . "/email/default/send-email", [
+        return $client->request('POST', $this->baseUrl . "/email/send-email", [
             'form_params' => [
                 "from" => $from,
                 "to" => $to,
