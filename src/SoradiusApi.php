@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class SoradiusApi
 {
-    const BASE_DOMAIN = "soradius.com";
+    const BASE_DOMAIN = "www.soradius.com";
 
     protected $apiKey;
     protected $baseDomain;
