@@ -26,10 +26,9 @@ class SoradiusApi
         $this->apiKey = $apiKey;
         $this->sandbox = $sandbox;
         $this->baseUrl = "https://" . $this->baseDomain . "/rest";
-        if (!empty($sandboxBaseUrl)){
+        if ($this->sandbox && !empty($sandboxBaseUrl)){
             $this->baseUrl =$sandboxBaseUrl."/rest";
         }
-
     }
     /**
      * Sends email to soradius api
