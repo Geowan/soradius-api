@@ -51,4 +51,22 @@ class SoradiusApi
             ]
         ]);
     }
+
+    /**
+     * @param $from
+     * @param $to
+     * @param $message
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function sendSms($from, $to, $message){
+        $client = new Client();
+        return $client->request('POST', $this->baseUrl . "/sms/send-sms", [
+            'form_params' => [
+                "from" => $from,
+                "to" => $to,
+                "message" => $message
+            ]
+        ]);
+    }
 }
